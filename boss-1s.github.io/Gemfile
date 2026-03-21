@@ -1,0 +1,17 @@
+source "https://rubygems.org"
+
+# Ruby 3.4+ Standard Library Replacements
+gem 'csv'
+gem 'base64'
+gem 'bigdecimal'
+gem 'mutex_m'
+
+# Core Jekyll 4 and Minimal Mistakes Theme Setup
+gem "jekyll", "~> 4.3"
+gem "minimal-mistakes-jekyll", "~> 4.24"
+
+# Performance booster for Jekyll 4
+group :jekyll_plugins do
+  gem "jekyll-feed"
+  gem "jekyll-sitemap"
+end
