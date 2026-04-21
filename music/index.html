@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,13 +20,13 @@
     <h1>MUSIC!!!</h1>
     <p>This wasn't really planned but i'm doing it anyways, since well Scratch is dead...</p>
     <button id="artistToggle"><span id="arrow1">➡</span> Artists</button>
-    <div id="artists" class="collapsable">
+    <div id="artists" class="collapsable" style="display: none;">
         <ul>
             <li><a href="artists/gk">Good Kid</a></li>
         </ul>
     </div>
     <button id="classmateToggle"><span id="arrow2">➡</span> Classmate Requests</button>
-    <div id="classmates" class="collapsable">
+    <div id="classmates" class="collapsable" style="display: none;">
         <p>Find your name below and click to go to your page of music requests.</p>
         <ul>
             <li><a href="class_requests/Angelo">Angelo</a></li>
@@ -39,7 +39,7 @@
             var s1 = document.getElementById('artists');
             var s2 = document.getElementById('classmates');
             
-            hiddenA.addEventListener('click', function() {
+            toggleA.addEventListener('click', function() {
                 if (s1.style.display === 'none') {
                     s1.style.display = 'block'; // Show the section
                     document.getElementById("arrow1").textContent="⬇"
@@ -48,7 +48,7 @@
                     document.getElementById("arrow1").textContent="➡"
                 }
             });
-            hiddenB.addEventListener('click', function() {
+            toggleB.addEventListener('click', function() {
                 if (s2.style.display === 'none') {
                     s2.style.display = 'block'; // Show the section
                     document.getElementById("arrow2").textContent="⬇"
