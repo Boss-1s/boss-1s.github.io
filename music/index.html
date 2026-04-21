@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PyScript CSS for visual components -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css">
+    <!-- Bootstraps the PyScript environment -->
+    <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+    <title>Music Tab</title>
+    <style>
+        .hiddenSection {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>MUSIC!!!</h1>
+    <p>This wasn't really planned but i'm doing it anyways, since well Scratch is dead...</p>
+    <button id="artistToggle"><span id="arrow1">➡</span> Artists</button>
+    <div id="artists" class="collapsable">
+        <ul>
+            <li><a href="artists/gk">Good Kid</a></li>
+        </ul>
+    </div>
+    <button id="classmateToggle"><span id="arrow2">➡</span> Classmate Requests</button>
+    <div id="classmates" class="collapsable">
+        <p>Find your name below and click to go to your page of music requests.</p>
+        <ul>
+            <li><a href="class_requests/Angelo">Angelo</a></li>
+            <li><a href="class_requests/Martin">Martin</a></li>
+        </ul>
+    </div>
+    <script>
+            var toggleA = document.getElementById('artistToggle');
+            var toggleB = document.getElementById('classmateToggle');
+            var s1 = document.getElementById('artists');
+            var s2 = document.getElementById('classmates');
+            
+            hiddenA.addEventListener('click', function() {
+                if (s1.style.display === 'none') {
+                    s1.style.display = 'block'; // Show the section
+                    document.getElementById("arrow1").textContent="⬇"
+                } else {
+                    s1.style.display = 'none'; // Hide the section
+                    document.getElementById("arrow1").textContent="➡"
+                }
+            });
+            hiddenB.addEventListener('click', function() {
+                if (s2.style.display === 'none') {
+                    s2.style.display = 'block'; // Show the section
+                    document.getElementById("arrow2").textContent="⬇"
+                } else {
+                    s2.style.display = 'none'; // Hide the section
+                    document.getElementById("arrow2").textContent="➡"
+                }
+            });
+    </script>
+</body>
+</html>
