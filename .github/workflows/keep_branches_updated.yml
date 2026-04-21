@@ -1,0 +1,22 @@
+name: Keep add-games Updated with main
+
+on:
+  push:
+    branches: main
+  workflow_dispatch:
+
+jobs:
+  push:
+    name: push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo@main
+        run: |
+          git checkout main
+          git pull origin main
+      - name: Push main into add-games
+        run: |
+          git checkout feature-xyz
+          git pull origin main
+          git merge main
+    
