@@ -2,7 +2,7 @@ name: sphinx
 
 on: [push, pull_request]  # No need to limit to certain branches
 jobs:
-  your-job:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -11,15 +11,21 @@ jobs:
           ref: main
       - name: multipages
         uses: coderefinery/gh-pages-multibranch@main
-        if: ${{ github.event_name == 'push' }}
         with:
-          directory: public
-      # Remember to not limit your deploy step to the default branch!
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.event_name == 'push' }}
-        with:
-          publish_branch: gh-pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: public/
-          force_orphan: true
+          directory: /
+          publish-branch: develop
+      - name: Upload GitHub Pages artifact
+        id: deployment 
+        uses: actions/upload-pages-artifact@v5.0.0
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        
