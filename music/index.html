@@ -9,7 +9,7 @@
     <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
     <title>Music Tab</title>
     <style>
-        .hiddenSection {
+        .collapsable {
             border: 1px solid #ccc;
             padding: 15px;
             margin-top: 10px;
@@ -19,18 +19,22 @@
 <body>
     <h1>MUSIC!!!</h1>
     <p>This wasn't really planned but i'm doing it anyways, since well Scratch is dead...</p>
-    <button id="artistToggle"><span id="arrow1">➡</span> Artists</button>
+    <button id="artistToggle"><span id="arrow1">➡</span> Artists (1 new!)</button>
     <div id="artists" class="collapsable" style="display: none;">
         <ul>
             <li><a href="artists/gk">Good Kid</a></li>
+            <li><a href="artists/tyler_creator">Tyler, the Creator</a></li>
         </ul>
     </div>
+    <br>
     <button id="classmateToggle"><span id="arrow2">➡</span> Classmate Requests</button>
     <div id="classmates" class="collapsable" style="display: none;">
         <p>Find your name below and click to go to your page of music requests.</p>
         <ul>
             <li><a href="class_requests/Angelo">Angelo</a></li>
             <li><a href="class_requests/Martin">Martin</a></li>
+            <li><a href="class_requests/Lucas">Lucas</a></li>
+            <li><a href="class_requests/Dylan">Dylan</a></li>
         </ul>
     </div>
     <script>
