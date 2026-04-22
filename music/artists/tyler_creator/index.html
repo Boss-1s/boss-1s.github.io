@@ -11,13 +11,15 @@ Tyler, The Creator
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Music - Angelo's Requests</title>
+    <title>Music - Tyler, the Creator</title>
     <link rel="stylesheet" href="/music/index.css">
 </head>
     <body>
         <h1>This is Tyler the Creator, <a href="/music">click here to go back</a></h1>
-        <h2>Albums</h2>
         <br>
+        <button id="play-all">
+            Play all songs on this page
+        </button><br>
         <button id="igorToggle">
             IGOR
         </button>
@@ -191,26 +193,77 @@ Tyler, The Creator
             </div>
             <br><br>
         </div>
+        <br>
         <!---->
         <button id="cmiyToggle">
             CALL ME IF YOU GET LOST
         </button>
         <div id="cmiy" class='collapsable'>
             <h1>CALL ME IF YOU GET LOST: The Estate Sale (Full Version)</h1><br>
-            <p>Progress: 16/25 (og 16)</p><br>
-            <div id="sb">
+            <p>Progress: 3/25, 16/25 uploaded</p><br>
+            <div id="blessed">
                 <h2>
-                    SIR BAUDELAIRE by Tyler, the Creator
+                    BLESSED by Tyler, the Creator
                 </h2>
                 <br>
                 <audio controls>
-                    <source src="/assets/tyler-creator/A BOY IS A GUN.mp3" type="audio/mpeg">
+                    <source src="/assets/tyler-creator/cmiygl/BLESSED.wav" type="audio/wav">
+                    Your browser does not support audio elements.
+                </audio>
+            </div>
+            <br><br>
+            <div id="corso">
+                <h2>
+                    CORSO by Tyler, the Creator
+                </h2>
+                <br>
+                <audio controls>
+                    <source src="/assets/tyler-creator/cmiygl/CORSO.wav" type="audio/wav">
+                    Your browser does not support audio elements.
+                </audio>
+            </div>
+            <br><br>
+            <div id="safari">
+                <h2>
+                    SAFARI by Tyler, the Creator
+                </h2>
+                <br>
+                <audio controls>
+                    <source src="/assets/tyler-creator/cmiygl/SAFARI.mp3" type="audio/mpeg">
                     Your browser does not support audio elements.
                 </audio>
             </div>
             <br><br>
         </div>
+        <br>
         <a href="mailto:bkwong@stscholasticaschool.org">Request More</a>
         <script src="/music/audio.js"></script>
+        <script>
+            var toggleA = document.getElementById('igorToggle');
+            var toggleB = document.getElementById('cmiyToggle');
+            // add more toggles here...
+            var s1 = document.getElementById('igor');
+            var s2 = document.getElementById('cmiy');
+            // add more sections here...
+            
+            toggleA.addEventListener('click', function() {
+                if (s1.style.display === 'none') {
+                    s1.style.display = 'block'; // Show the section
+                    document.getElementById("arrow1").textContent="⬇"
+                } else {
+                    s1.style.display = 'none'; // Hide the section
+                    document.getElementById("arrow1").textContent="➡"
+                }
+            });
+            toggleB.addEventListener('click', function() {
+                if (s2.style.display === 'none') {
+                    s2.style.display = 'block'; // Show the section
+                    document.getElementById("arrow2").textContent="⬇"
+                } else {
+                    s2.style.display = 'none'; // Hide the section
+                    document.getElementById("arrow2").textContent="➡"
+                }
+            });
+        </script>
     </body>
 </html>
