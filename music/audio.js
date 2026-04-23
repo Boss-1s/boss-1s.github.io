@@ -25,3 +25,4 @@ document.getElementById('play-all').addEventListener('click', function() {
 
     // Start the sequence
     playNext();
+});
