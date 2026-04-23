@@ -5,8 +5,10 @@
   </head>
   <body>
     <h1>
-      Nothing here yet...
+      This is the greatest website, that has - ever been made
     </h1>
+    <h3><a href="/music">Music</a></h3>
+    <h3><a href="/scratch/tw-packaged/">Games</a></h3>
     <br>
     <p>
       While you're at it, why don't you check out my other accounts and projects?
@@ -20,10 +22,49 @@
       <li><a href="https://www.noteflight.com/profile/586555082992c644fec16a6c13d6d62ea1f92eed">Boss_1s on Noteflight</a></li>
       <li>(i dont have discord <em>yet</em>, sry)</li>
     </ul>
-    <br>
-    <p><bold>NOTICE:</bold> as of 4/20/26 i have packaged 4 playable games, check them out <a href="scratch/tw-packaged/">here</a></p>
+    <!--
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('Service Worker Registered!', reg))
+          .catch(err => console.error('Registration failed:', err));
+      }
 
-    <br>
-    <p><bold>NOTICE:</bold> as of 4/21/26 music is now avaliable, check it out <a href="music">here</a></p>
+      async function askPermission() {
+        const permission = await Notification.requestPermission();
+        if (permission === 'granted') {
+          notify("Hello from Boss_1s!",
+                 "This is a test notification.",
+                 undefined,
+                 "test"
+                );
+        }
+      }
+
+      async function notify(title, 
+                            body, 
+                            icon="/favicon.png", 
+                            tag="boss-1s-notif", 
+                            actions=[{ action: "open", title: "Open Site" }], 
+                            requireInteraction=false, 
+                            silent=false
+                           ) {
+        const sw = await navigator.serviceWorker.ready;
+
+        const config = {
+          title: title,
+          body: body,
+          icon: icon,
+          tag: tag,
+          actions: actions,
+          requireInteraction: requireInteraction,
+          silent: silent
+        }
+
+        reg.showNotification(title, config);
+      }
+
+    </script>
+    -->
   </body>
 </html>
