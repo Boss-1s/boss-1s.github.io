@@ -6,3 +6,20 @@ document.addEventListener('play', function(e) {
         }
     }
 }, true);
+
+document.getElementById('play-all').addEventListener('click', function() {
+    const audios = document.getElementsByTagName("audio");
+    let currentIndex = 0;
+    
+    function playNext() {
+        if (currentIndex < audios.length) {
+            audios[currentIndex].play();
+            audios[currentIndex].onended = () => {
+                currentIndex++;
+                playNext();
+            };
+        }
+    }
+
+    // Start the sequence
+    playNext();
