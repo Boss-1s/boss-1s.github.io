@@ -30,6 +30,7 @@ document.getElementById('play-all').addEventListener('click', function() {
                 currentIndex = 0;
                 playNext();
             }
+        }
     }
 
     // Start the sequence
