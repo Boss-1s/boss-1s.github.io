@@ -36,7 +36,6 @@ const opt = {
 };
     
 */
-/****/
 
 document.addEventListener('play', function(e) {
     const audios = document.getElementsByTagName('audio');
