@@ -16,7 +16,7 @@ document.getElementById('play-all').addEventListener('click', function() {
     
     function playNext() {
         if (currentIndex < audios.length) {
-            console.log(`Starting song ${audios[currentIndex]}`
+            console.log(`Starting song ${audios[currentIndex]}`);
             audios[currentIndex].play();
             audios[currentIndex].onended = () => {
                 audios[currentIndex].currentTime = 0;
