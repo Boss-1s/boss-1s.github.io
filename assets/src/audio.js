@@ -1,3 +1,4 @@
+/*
 async function notify(title, 
                       body, 
                       icon="/favicon.png", 
@@ -34,7 +35,7 @@ const opt = {
     silent: true,
 };
     
-
+*/
 /****/
 
 document.addEventListener('play', function(e) {
@@ -57,14 +58,14 @@ document.getElementById('play-all').addEventListener('click', function() {
         if (currentIndex < audios.length) {
             const audioName = audios[currentIndex].src.split('/').pop();
             console.log(`Starting song ${audioName}`);
-            notify("Now Playing",
+            /*notify("Now Playing",
                    opt[0],
                    opt[1],
                    opt[2],
                    opt[3],
                    opt[4],
                    opt[5],
-                  );
+                  );*/
             audios[currentIndex].play();
             audios[currentIndex].onended = () => {
                 audios[currentIndex].currentTime = 0;
