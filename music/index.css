@@ -1,0 +1,31 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#main-controls {
+    border: 1px solid blue;
+    padding: 15px;
+    margin-top: 10px;
+}
+#main-controls button {
+    background-color: blue;
+    color: white;
+}
+#main-controls button:hover {
+    background-color: #00FFFF;
+    color: black;
+}
+#main-controls label {
+    color: blue;
+}
+  
+.collapsable {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-top: 10px;
+    display: none;
+}
+
+.collapsable:target {
+    display: block;
+}

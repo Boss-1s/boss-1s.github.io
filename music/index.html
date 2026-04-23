@@ -7,20 +7,14 @@
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css">
     <!-- Bootstraps the PyScript environment -->
     <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
-    <title>Music Tab</title>
-    <style>
-        .collapsable {
-            border: 1px solid #ccc;
-            padding: 15px;
-            margin-top: 10px;
-        }
-    </style>
+    <title>Boss_1s's Classroom of Songs</title>
+    <link rel="stylesheet" href="/music/index.css">
 </head>
 <body>
-    <h1>MUSIC!!!</h1>
+    <h1>MU<span>SI</span>C!!!</h1> <!--random span might thwart off gg-->
     <p>This wasn't really planned but i'm doing it anyways, since well Scratch is dead...</p>
     <button id="artistToggle"><span id="arrow1">➡</span> Artists (1 new!)</button>
-    <div id="artists" class="collapsable" style="display: none;">
+    <div id="artists" class="collapsable">
         <ul>
             <li><a href="artists/gk">Good Kid</a></li>
             <li><a href="artists/tyler_creator">Tyler, the Creator</a></li>
@@ -28,8 +22,8 @@
     </div>
     <br>
     <button id="classmateToggle"><span id="arrow2">➡</span> Classmate Requests</button>
-    <div id="classmates" class="collapsable" style="display: none;">
-        <p>Find your name below and click to go to your page of music requests.</p>
+    <div id="classmates" class="collapsable">
+        <p>Find your name below and click to go to your page of music requests. Note that you may be redirected to the artist's page instead.</p>
         <ul>
             <li><a href="class_requests/Angelo">Angelo</a></li>
             <li><a href="class_requests/Martin">Martin</a></li>
@@ -38,29 +32,29 @@
         </ul>
     </div>
     <script>
-            var toggleA = document.getElementById('artistToggle');
-            var toggleB = document.getElementById('classmateToggle');
-            var s1 = document.getElementById('artists');
-            var s2 = document.getElementById('classmates');
-            
-            toggleA.addEventListener('click', function() {
-                if (s1.style.display === 'none') {
-                    s1.style.display = 'block'; // Show the section
-                    document.getElementById("arrow1").textContent="⬇"
-                } else {
-                    s1.style.display = 'none'; // Hide the section
-                    document.getElementById("arrow1").textContent="➡"
-                }
-            });
-            toggleB.addEventListener('click', function() {
-                if (s2.style.display === 'none') {
-                    s2.style.display = 'block'; // Show the section
-                    document.getElementById("arrow2").textContent="⬇"
-                } else {
-                    s2.style.display = 'none'; // Hide the section
-                    document.getElementById("arrow2").textContent="➡"
-                }
-            });
+        var toggleA = document.getElementById('artistToggle');
+        var toggleB = document.getElementById('classmateToggle');
+        var s1 = document.getElementById('artists');
+        var s2 = document.getElementById('classmates');
+        
+        toggleA.addEventListener('click', function() {
+            if (s1.style.display === 'none') {
+                s1.style.display = 'block'; // Show the section
+                document.getElementById("arrow1").textContent="⬇"
+            } else {
+                s1.style.display = 'none'; // Hide the section
+                document.getElementById("arrow1").textContent="➡"
+            }
+        });
+        toggleB.addEventListener('click', function() {
+            if (s2.style.display === 'none') {
+                s2.style.display = 'block'; // Show the section
+                document.getElementById("arrow2").textContent="⬇"
+            } else {
+                s2.style.display = 'none'; // Hide the section
+                document.getElementById("arrow2").textContent="➡"
+            }
+        });
     </script>
 </body>
 </html>
