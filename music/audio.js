@@ -9,7 +9,7 @@ document.addEventListener('play', function(e) {
 }, true);
 
 document.getElementById('play-all').addEventListener('click', function() {
-    alert("this will play all songs on the order they appear on this page.\nto skip a song, click the next button.\nI will add shuffling and looping later.")
+    alert("this will play all songs on the order they appear on this page.\nto skip a song, click the next button.\nI will add shuffling and looping later.");
     
     const audios = document.getElementsByTagName("audio");
     let currentIndex = 0;
