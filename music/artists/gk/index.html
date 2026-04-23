@@ -19,9 +19,9 @@ Can We Hang Out Sometime?
             Play all songs on this page
         </button><br>
         <button type="button" id="gk3toggle">
-            Good Kid 3
+            <span id='arrow1'>➡</span> Good Kid 3
         </button><br>
-        <div id="gk3" class="collapsible">
+        <div id="gk3" class="collapsable">
             <h2>Good Kid 3</h2>
             <br>
             <p>Progress: 6/6 ✅</p>
@@ -116,7 +116,31 @@ Can We Hang Out Sometime?
         </div>
         <script src="/music/audio.js"></script>
         <script>
-            // open/close logic
+            var toggleA = document.getElementById('gk3toggle');
+            //var toggleB = document.getElementById('gk4toggle');
+            //var toggleC = document.getElementById('cwhosToggle');
+            var s1 = document.getElementById('gk3');
+            //var s2 = document.getElementById('gk4');
+            //var s3 = document.getElementById('cwhos');
+            
+            toggleA.addEventListener('click', function() {
+                if (s1.style.display === 'none') {
+                    s1.style.display = 'block'; // Show the section
+                    document.getElementById("arrow1").textContent="⬇"
+                } else {
+                    s1.style.display = 'none'; // Hide the section
+                    document.getElementById("arrow1").textContent="➡"
+                }
+            });
+            /*toggleB.addEventListener('click', function() {
+                if (s2.style.display === 'none') {
+                    s2.style.display = 'block'; // Show the section
+                    document.getElementById("arrow2").textContent="⬇"
+                } else {
+                    s2.style.display = 'none'; // Hide the section
+                    document.getElementById("arrow2").textContent="➡"
+                }
+            });*/
         </script>
     </body>
 </html>
