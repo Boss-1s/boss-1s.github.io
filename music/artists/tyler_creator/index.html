@@ -17,9 +17,33 @@ Tyler, The Creator
     <body>
         <h1>This is Tyler the Creator, <a href="/music">click here to go back</a></h1>
         <br>
-        <button id="play-all">
-            Play all songs on this page
-        </button><br>
+        <div id="main-controls">
+            <h3>Page-Wide Controls</h3><br>
+            <button id="play-all">
+                Play all songs on this page
+            </button>
+            &nbsp;&nbsp;
+            <button id="play-next">
+                Play next song
+            </button>
+            &nbsp;&nbsp;
+            <button id="pause">
+                Pause
+            </button>
+            &nbsp;&nbsp;
+            <button id="resume">
+                Resume Paused Songs
+            </button>
+            &nbsp;&nbsp;
+            <label for="loop">Loop Songs</label>
+            <input type="checkbox" name="loop" id="loop">
+            <!--
+            &nbsp;&nbsp;
+            <label for="shuffle">Shuffle Songs</label>
+            <input type="checkbox" name="shuffle" id="shuffle">
+            -->
+        </div>
+        <br>
         <button id="igorToggle">
             <span id="arrow1">➡</span> IGOR
         </button>
