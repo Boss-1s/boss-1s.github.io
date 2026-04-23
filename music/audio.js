@@ -8,6 +8,8 @@ document.addEventListener('play', function(e) {
 }, true);
 
 document.getElementById('play-all').addEventListener('click', function() {
+    alert("this will play all songs on the order they appear on this page.")
+    
     const audios = document.getElementsByTagName("audio");
     let currentIndex = 0;
     
