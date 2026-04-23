@@ -22,6 +22,47 @@
       <li><a href="https://www.noteflight.com/profile/586555082992c644fec16a6c13d6d62ea1f92eed">Boss_1s on Noteflight</a></li>
       <li>(i dont have discord <em>yet</em>, sry)</li>
     </ul>
-    <br>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('Service Worker Registered!', reg))
+          .catch(err => console.error('Registration failed:', err));
+      }
+
+      async function askPermission() {
+        const permission = await Notification.requestPermission();
+        if (permission === 'granted') {
+          notify("Hello from Boss_1s!",
+                 "This is a test notification.",
+                 undefined,
+                 "test"
+                );
+        }
+      }
+
+      async function notify(title, 
+                            body, 
+                            icon="/favicon.png", 
+                            tag="boss-1s-notif", 
+                            actions=[{ action: "open", title: "Open Site" }], 
+                            requireInteraction=false, 
+                            silent=false
+                           ) {
+        const sw = await navigator.serviceWorker.ready;
+
+        const config = {
+          title: title,
+          body: body,
+          icon: icon,
+          tag: tag,
+          actions: actions,
+          requireInteraction: requireInteraction,
+          silent: silent
+        }
+
+        reg.showNotification(title, config);
+      }
+
+    </script>
   </body>
 </html>
