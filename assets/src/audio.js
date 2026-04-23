@@ -28,11 +28,11 @@ const opt = {
     tag: "now-playing-notif",
     actions: [
         { action: 'pause', title: 'Pause' },
-        { action: 'next', titile: 'Skip' }
+        { action: 'next', titile: 'Play Next' }
     ],
     requireInteraction: true,
     silent: true,
-}
+};
     
 
 /****/
