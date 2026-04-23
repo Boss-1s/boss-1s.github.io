@@ -26,6 +26,6 @@ html {
     display: none;
 }
 
-.collapsable:target {
+.collapsable:has(:target) {
     display: block;
 }
