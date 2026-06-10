@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Watch Good Kid Stream here!</title>
+    <style>
+        /* Bounding box wrapper to control max size on large desktops */
+        .stream-wrapper {
+          width: 100%;
+          max-width: 1200px; /* Limits size on massive monitors */
+          margin: 0 auto;    /* Centers the stream horizontally */
+          padding: 15px;
+          box-sizing: border-box;
+        }
+    
+        /* Container maintaining the correct fluid sizing */
+        .responsive-container {
+          position: relative;
+          width: 100%;
+          /* Adjust padding-top based on your layout configuration:
+             - Use 56.25% if layout is "video" (Standard 16:9 widescreen video ratio)
+             - Use 75% if layout is "video-with-chat" (Standard 16:12 ratio to fit the chat panel nicely) */
+          padding-top: 75%; 
+          height: 0;
+          overflow: hidden;
+          background: #000; /* Prevents visual flash while loading */
+        }
+    
+        /* Forces Twitch iframe to occupy the exact bounding box size */
+        .responsive-container iframe,
+        .responsive-container #twitch-embed {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. The container where the stream will be displayed -->
+    <div class="stream-wrapper">
+        <!-- Wrap your target element inside the new responsive layout classes -->
+        <div class="responsive-container">
+            <div id="twitch-embed"></div>
+        </div>
+    </div>
+
+    <!-- 2. Load the Twitch Embed JavaScript file -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <!-- 3. Initialize the Twitch Embed -->
+    <script type="text/javascript">
+        new Twitch.Embed("twitch-embed", {
+            width: 100%,
+            height: 100%,
+            channel: "goodkidband",
+            layout: "video-with-chat", // Options: "video-with-chat", "video", or "chat"
+            autoplay: true,
+            // parent must include the domain where the HTML is hosted
+            parent: ["boss-1s.github.io"] 
+        });
+    </script>
+
+</body>
+</html>
