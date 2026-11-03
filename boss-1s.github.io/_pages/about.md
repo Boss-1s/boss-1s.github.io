@@ -1,4 +1,7 @@
 ---
+permalink: /about/
+layout: single
+title: "About"
 defaults:
   # _pages
   - scope:
@@ -6,16 +9,19 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: true
-    permalink: "/about/"
 ---
 
 _If you're one of my classmates and are looking for **Eaglercraft**, you're in the wrong place. Try [clicking this link to go straight there.](https://boss-1s.github.io/eag/)_
 
 ---
 
-[![](https://github.com/Boss-1s/github-stats/blob/generated/overview.svg#gh-dark-mode-only)](https://github.com/Boss-1s#contributions:~:text=contributions,-in%20the%20last%20year)
-[![](https://github.com/boss-1s/github-stats/blob/generated/languages.svg#gh-dark-mode-only)](https://github.com/Boss-1s?tab=repositories)
+<center markdown="block">
+
+[![](https://github.com/Boss-1s/github-stats/raw/generated/overview.svg#gh-dark-mode-only)](https://github.com/Boss-1s#contributions:~:text=contributions,-in%20the%20last%20year)
+[![](https://github.com/boss-1s/github-stats/raw/generated/languages.svg#gh-dark-mode-only)](https://github.com/Boss-1s?tab=repositories)
+
+</center>
+
 > [!Tip]
 >
 > [Created with `jstrieb/github-stats`.](https://github.com/jstrieb/github-stats). Give it a try yourself!
