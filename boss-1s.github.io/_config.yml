@@ -12,20 +12,20 @@
 
 theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise", "catppuccin_latte", "catppuccin_mocha"
+minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise", "catppuccin_latte", "catppuccin_mocha"
 
 # Site Settings
 locale                   : "en-US"
 title                    : "Boss_1s"
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+title_separator          : "|"
+subtitle                 : "Budding Indie Pop artist and Open-Source Developer" # site tagline that appears below site title in masthead
 name                     : "Boss_1s"
-description              : "Boss_1s - Python & Indie Pop is life, for life."
+description              : "Boss_1s - Indie Pop & Python is life -- Budding Indie Pop artist and Open-Source Developer."
 url                      : "https://boss-1s.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/" # the subpath of your site, e.g. "/blog"
 repository               : "Boss-1s/boss-1s.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "favicon.ico" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "favicon.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 enable_copy_code_button  : true # true, false (default)
 
 # Social Sharing
@@ -51,6 +51,22 @@ enable_copy_code_button  : true # true, false (default)
 #     tracking_id          :
 #     anonymize_ip         : # true, false (default)
 
+main:
+  - title: "About"
+    url: /about/
+  - title: "Posts"
+    url: /year-archive/
+  - title: "Categories"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
+  - title: "Pages"
+    url: /page-archive/
+  - title: "Collections"
+    url: /collection-archive/
+  - title: "Noteflight"
+    url: https://www.noteflight.com/profile/586555082992c644fec16a6c13d6d62ea1f92eed
+    target: _blank
 
 # Site Author
 author:
@@ -149,6 +165,21 @@ sass:
   quiet_deps: true
   silence_deprecations: ['import']
 
+breadcrumbs:
+  enabled: true
+  separator: " / "
+  home_label: "Home"
+  show_current: true
+  show_title: false
+  show_home: true
+  show_all: false
+  min_items: 2
+  max_items: 0
+  include_home: true
+  include_posts: true
+  include_collections: true
+  include_categories: true
+  include_tags: true
 
 # Outputting
 permalink: /:categories/:title/
