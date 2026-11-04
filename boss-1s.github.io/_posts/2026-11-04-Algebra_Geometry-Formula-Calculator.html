@@ -1,0 +1,196 @@
+---
+title: "Algebra/Geometry Formula Calculator"
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+      comments: true
+      share: true
+      related: false
+---
+
+<head>
+  <script src="https://cdn.jsdelivr.net/pyodide/v314.0.7/full/pyodide.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.2/dist/jszip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ansi_up@6.0.6/ansi_up.min.js"></script>
+  <style>
+    #output {
+      font-family: monospace;
+      border: 1px solid #ccc;
+      height: 500px;
+      font-size: 16px;
+    }
+    #runButton {
+      font-size: 16px;
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: #4CAF50;
+      border-radius: 20%;
+    }
+    #description {
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+  <div markdown="block">
+
+    <em>Includes: Pythagorean Theorem, Triangle Prover, Area, Volume, Distance, Midpoint, Circle Formulas. (v2026.8.1)</em>
+
+    > [!warning]
+    > Expiremental; may not work.
+
+  </div>
+  <hr>
+  <p id="description">
+    Pythagorean Theorem (and other formulas) <br>
+    <br>
+    Kind-of simple math programs written in python to speedrun <br>
+    homework.<br>
+    The following can currently be used, followed by thier in-program names for access:<br>
+    Pythagorean Theorem a^2+b^2=c^2 <code>abc</code><br>
+    Pythagorean Theorem Right Triangle Validation <code>cab</code><br>
+    Distance Formula (2D & 3D) <code>dist</code><br>
+    Area and circumfrence of a circle <code>circle</code><br>
+    volume of certain obejcts <code>volume</code><br>
+    Rotation Formula (2D) <code>rotate</code><br>
+    Quadratic Forumula (Equation, Discriminant, Solutions, and Roots) <code>quadratic</code><br>
+    <br>
+    (c) 2025-2026 Boss_1s.<br>
+    This work is licensced under the CC BY-NC-SA 3.0 Int'l Licensce.<br>
+    To view a copy of the licence, visit creativecommons.org.<br>
+    <br>
+    v26.8.1<br>
+    (8/18/2026)<br>
+  </p>
+  <hr>
+  <center>
+    <label for="runButton">Hit Run to start the program!</label>
+    <button id="runButton" onclick="evaluatePython()" disabled>Run</button>
+  </center>
+  <br />
+  <br />
+  <div>Output:</div>
+  <pre id="output" style="width: 100%; align-content: left;"></pre>
+
+  <script>
+
+    async function add_to_output(text) {
+      const output = document.getElementById("output");
+      text += '\n';
+      text = '    ' + text
+      output.innerHTML += text;
+      output.scrollTop = output.scrollHeight;
+    }
+
+    add_to_output("Initializing...");
+    // init Pyodide
+    async function main() {
+      let pyodide = await loadPyodide();
+      add_to_output("Ready!");
+      document.getElementById("runButton").disabled = false;
+      return pyodide;
+    }
+
+    let pyodideReadyPromise = main();
+
+    async function evaluatePython() {
+      runButton.disabled = true;
+      add_to_output("Loading Pyodide...");
+      let pyodide = await loadPyodide({
+        stdout: (text) => {
+          add_to_output(text);
+        },
+        stderr: (text) => {
+          console.error("Python Error:", text);
+        }
+      });
+
+      pyodide.registerJsModule("js_input_handler", {
+        prompt_user: function(promptText) {
+          const result = prompt(promptText);
+
+          return result !== null ? result : "";
+        }
+      });
+
+      add_to_output("Patching input()...");
+
+      pyodide.runPython(`
+        import builtins
+        import js_input_handler
+
+        def custom_input(prompt=""):
+            # Call the JavaScript prompt function and pass the prompt text
+            return js_input_handler.prompt_user(str(prompt))
+
+        # Replace the default input function globally
+        builtins.input = custom_input
+      `);
+
+      add_to_output("Zipping scripts...");
+
+      const zip = new JSZip();
+
+      const filesToFetch = [
+        'main.py',
+        'abc.py',
+        'cab.py',
+        'dist.py',
+        'circle.py',
+        'volume.py',
+        'rotate.py',
+        'quadratic.py',
+        'mid.py'
+      ];
+
+      const fetchPromises = filesToFetch.map(async (filePath) => {
+        try {
+          const response = await fetch(`/assets/tools/${filePath}`);
+          if (!response.ok) throw new Error(`Could not fetch ${filePath}`);
+          const text = await response.text();
+
+          zip.file(filePath, text);
+        } catch (error) {
+          console.error(`Error fetching ${filePath}:`, error);
+          add_to_output(`Error fetching ${filePath}: ${error.message}`);
+        }
+      });
+
+      await Promise.all(fetchPromises);
+
+      const zipBuffer = await zip.generateAsync({ type: "arraybuffer" });
+
+      pyodide.unpackArchive(zipBuffer, "zip", { extractDir: "/" });
+
+      add_to_output("Running program...");
+
+      let mainCode = pyodide.FS.readFile('/main.py', { encoding: 'utf8' });
+      try {
+        let output = await pyodide.runPythonAsync(`
+          import os
+          file_path = '/main.py'
+          with open(file_path, 'r') as f:
+              code_obj = compile(f.read(), file_path, 'exec')
+          exec(code_obj, {
+              '__file__': file_path,
+              '__name__': '__main__'
+          })
+        `);
+        add_to_output(output);
+      } catch (err) {
+        add_to_output("\\33[31m"+err+"\\33[0m");
+      }
+      runButton.disabled = false;
+    }
+  </script>
+</body>
+
