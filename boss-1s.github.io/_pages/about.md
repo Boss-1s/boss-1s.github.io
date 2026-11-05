@@ -3,6 +3,7 @@ permalink: /about/
 layout: single
 title: "About"
 excerpt: "All about Boss_1s"
+author_profile: true
 ---
 
 _If you're one of my classmates and are looking for **Eaglercraft**, you're in the wrong place. Try [clicking this link to go straight there.](https://boss-1s.github.io/archive/eag/)_

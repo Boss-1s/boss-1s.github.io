@@ -267,7 +267,11 @@ compress_html:
 
 # Defaults
 defaults:
-  # _posts
+  - scope:
+      path: ""
+    values:
+      toc: true
+      toc_sticky: true
   - scope:
       path: ""
       type: posts
@@ -275,7 +279,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
   - scope:
@@ -284,6 +288,6 @@ defaults:
     values:
       layout: single
       author_profile: false
-      read_time: false
+      read_time: true
       share: true
       related: false
