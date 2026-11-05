@@ -24,7 +24,7 @@ description              : "Boss_1s - Indie Pop & Python is life -- Budding Indi
 url                      : "https://boss-1s.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/" # the subpath of your site, e.g. "/blog"
 repository               : "Boss-1s/boss-1s.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : "/assets/teaser-default.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "favicon.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 enable_copy_code_button  : true # true, false (default)
 
@@ -55,10 +55,8 @@ enable_copy_code_button  : true # true, false (default)
 author:
   name             : "Boss_1s"
   avatar           : "avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Coming Soon..."
-  location         : " "
-  # email            :
-  # fediverse      : "@you@instance.social"  # used for fediverse:creator meta tag
+  bio              : "Budding Indie Pop artist and Open-Source Developer"
+  location         : "Guess"
   links:
     # - label: "Email"
     #   icon: "fas fa-fw fa-square-envelope"
@@ -68,7 +66,13 @@ author:
       url: "https://boss-1s.github.io/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/Boss-1s"
+      url: "https://github.com/Boss-1s"
+    - label: "Noteflight"
+      icon: "fas fa-fw fa-music"
+      url: "https://www.noteflight.com/profile/586555082992c644fec16a6c13d6d62ea1f92eed"
+    - label: "Reddit"
+      icon: "fab fa-fw fa-reddit"
+      url: "https://www.reddit.com/u/Boss_1s"
 
 # Site Footer
 footer:
@@ -79,6 +83,9 @@ footer:
     - label: "Noteflight"
       icon: "fas fa-fw fa-music"
       url: "https://www.noteflight.com/profile/586555082992c644fec16a6c13d6d62ea1f92eed"
+    - label: "Reddit"
+      icon: "fab fa-fw fa-reddit"
+      url: "https://www.reddit.com/u/Boss_1s"
     - label: "Source"
       icon: "fas fa-fw fa-code"
       url: "https://github.com/Boss-1s/boss-1s.github.io"
@@ -214,7 +221,11 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-gfm-admonitions
 
+search: true
+lunr:
+  search_within_pages: true
 
 # Archives
 #  Type

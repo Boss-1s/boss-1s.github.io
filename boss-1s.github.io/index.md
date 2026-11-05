@@ -2,12 +2,14 @@
 layout: home
 ---
 
+<img src="/favicon.png" style="width: 50%; height: auto; display: block; margin: 0 auto;">
+
 > [!warning]
 > Website is still under construction. Either head to the [old version](/archive/) or navigate around **at your own risk.**
 
 # Hi There! 👋
 
-Boss_1s here. Welcome to my personal website.
+Boss_1s here. Welcome to my personal website. **:)**
 
 Definitely looks different around here, eh?
 
