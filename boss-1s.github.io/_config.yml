@@ -24,7 +24,7 @@ description              : "Boss_1s - Indie Pop & Python is life -- Budding Indi
 url                      : "https://boss-1s.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/" # the subpath of your site, e.g. "/blog"
 repository               : "Boss-1s/boss-1s.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/teaser-default.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : "/assets/teaser_default.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "favicon.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 enable_copy_code_button  : true # true, false (default)
 
@@ -176,7 +176,7 @@ breadcrumbs:
 
 # Outputting
 permalink: /:categories/:title/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: "America/Chicago" # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Pagination with jekyll-paginate
@@ -272,6 +272,8 @@ defaults:
     values:
       toc: true
       toc_sticky: true
+      show_dates: true
+      date_format: "%Y %B %d"
   - scope:
       path: ""
       type: posts
@@ -282,6 +284,7 @@ defaults:
       comments: true
       share: true
       related: true
+      categories: "posts"
   - scope:
       path: ""
       type: pages
@@ -291,3 +294,4 @@ defaults:
       read_time: true
       share: true
       related: false
+      categories: "pages"
