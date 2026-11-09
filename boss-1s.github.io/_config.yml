@@ -163,9 +163,9 @@ breadcrumbs:
   separator: " / "
   home_label: "Home"
   show_current: true
-  show_title: false
+  show_title: true
   show_home: true
-  show_all: false
+  show_all: true
   min_items: 2
   max_items: 0
   include_home: true
@@ -272,7 +272,7 @@ defaults:
     values:
       toc: true
       toc_sticky: true
-      show_dates: true
+      show_date: true
       date_format: "%Y %B %d"
   - scope:
       path: ""

@@ -4,6 +4,8 @@ layout: single
 title: "About"
 excerpt: "All about Boss_1s"
 author_profile: true
+date: 2026-11-01
+last_modified_at: 2026-11-09
 ---
 
 _If you're one of my classmates and are looking for **Eaglercraft**, you're in the wrong place. Try [clicking this link to go straight there.](https://boss-1s.github.io/archive/eag/)_

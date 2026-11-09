@@ -50,6 +50,7 @@ en: &DEFAULT_EN
   search_algolia_no_results  : "No results"
   results_found              : "Result(s) found"
   back_to_top                : "Back to top"
+  created_label              : "Created:"
 en-US:
   <<: *DEFAULT_EN
 en-CA:
@@ -109,6 +110,7 @@ es: &DEFAULT_ES
   search_algolia_no_results  :
   results_found              : "resultado(s) encontrado(s)"
   back_to_top                : "Volver arriba"
+  created_label              : "Creado:"
 es-ES:
   <<: *DEFAULT_ES
 es-CO:
@@ -164,6 +166,7 @@ fr: &DEFAULT_FR
   search_algolia_no_results  :
   results_found              : "Résultat(s) trouvé(s)"
   back_to_top                : "Retour en haut"
+  created_label              : "Créé :"
 fr-FR:
   <<: *DEFAULT_FR
 fr-BE:
@@ -218,6 +221,7 @@ tr: &DEFAULT_TR
   loading_label              : "Yükleniyor..."
   search_label_text          :
   search_algolia_no_results  :
+  created_label              : "Oluşturulma tarihi:"
 tr-TR:
   <<: *DEFAULT_TR
 
@@ -268,6 +272,7 @@ pt: &DEFAULT_PT
   loading_label              : "A carregar..."
   search_label_text          :
   search_algolia_no_results  :
+  created_label              : "Criado:"
 pt-PT:
   <<: *DEFAULT_PT
 # Brazilian Portuguese
@@ -319,6 +324,7 @@ pt-BR:
   search_algolia_no_results  : "Nenhum resultado"
   results_found              : "Resultado(s) encontrado(s)"
   back_to_top                : "Voltar para o topo"
+  created_label              : "Criado:"
 
 # Italian
 # -------
@@ -370,6 +376,7 @@ it: &DEFAULT_IT
   search_algolia_no_results  :
   results_found              : "Risultati"
   back_to_top                : "Vai su"
+  created_label              : "Creato:"
 it-IT:
   <<: *DEFAULT_IT
 
@@ -423,6 +430,7 @@ zh: &DEFAULT_ZH_HANS
   search_algolia_no_results  : "无结果"
   results_found              : "条记录匹配"
   back_to_top                : "返回顶部"
+  created_label              : "创建日期:"
 zh-CN:
   <<: *DEFAULT_ZH_HANS
 zh-SG:
@@ -476,6 +484,7 @@ zh-TW: &DEFAULT_ZH_HANT
   search_algolia_no_results  : "找不到結果"
   results_found              : "找到結果"
   back_to_top                : "回到頁首"
+  created_label              : "建立日期:"
 zh-HK:
   <<: *DEFAULT_ZH_HANT
 
@@ -529,6 +538,7 @@ de: &DEFAULT_DE
   search_algolia_no_results  :
   results_found              : "Ergebnis(se) gefunden"
   back_to_top                : "Nach oben"
+  created_label              : "Erstellt:"
 de-DE:
   <<: *DEFAULT_DE
 de-AT:
@@ -589,6 +599,7 @@ ne: &DEFAULT_NE
   loading_label              : "लोड हुँदैछ ..."
   search_label_text          :
   search_algolia_no_results  :
+  created_label              : "सिर्जना गरिएको:"
 ne-NP:
   <<: *DEFAULT_NE
 
@@ -642,6 +653,7 @@ ko: &DEFAULT_KO
   search_algolia_no_results  :
   results_found              : "개 결과 발견"
   back_to_top                : "맨 위로 이동"
+  created_label              : "생성일:"
 ko-KR:
   <<: *DEFAULT_KO
 
@@ -694,6 +706,7 @@ ru: &DEFAULT_RU
   search_placeholder_text    : "Введите поисковый запрос..."
   search_algolia_no_results  :
   results_found              : "Найдено"
+  created_label              : "Создано:"
 ru-RU:
   <<: *DEFAULT_RU
 
@@ -744,6 +757,7 @@ lt: &DEFAULT_LT
   loading_label              : "Kraunama..."
   search_label_text          :
   search_algolia_no_results  :
+  created_label              : "Sukurta:"
 lt-LT:
   <<: *DEFAULT_LT
 
@@ -796,6 +810,7 @@ gr: &DEFAULT_GR
   search_placeholder_text    : "Εισάγετε όρο αναζήτησης..."
   search_algolia_no_results  :
   results_found              : "Αποτελέσματα"
+  created_label              : "Δημιουργήθηκε:"
 gr-GR:
   <<: *DEFAULT_GR
 
@@ -848,6 +863,7 @@ sv: &DEFAULT_SV
   search_placeholder_text    : "Fyll i sökterm..."
   search_algolia_no_results  :
   results_found              : "Resultat funna"
+  created_label              : "Skapad:"
   back_to_top                : "Tillbaka till toppen"
 sv-SE:
   <<: *DEFAULT_SV
@@ -903,6 +919,7 @@ nl: &DEFAULT_NL
   search_placeholder_text    : "Geef uw zoekterm in..."
   search_algolia_no_results  :
   results_found              : "Resultaat gevonden"
+  created_label              : "Aangemaakt:"
   back_to_top                : "Terug naar boven"
 nl-BE:
   <<: *DEFAULT_NL
@@ -942,6 +959,7 @@ id: &DEFAULT_ID
   website_label              : "Website"
   email_label                : "Email"
   recent_posts               : "Post terbaru"
+  created_label              : "Dibuat:"
   undefined_wpm              : "Parameter terdeskripsi words_per_minute di _config.yml"
   comment_form_info          : "Email Anda tidak akan dipublish. Kolom yang diperlukan ditandai dengan tanda "
   comment_form_comment_label : "Komentar"
@@ -995,6 +1013,7 @@ vi: &DEFAULT_VI
   website_label              : "Website"
   email_label                : "Email"
   recent_posts               : "Bài viết mới"
+  created_label              : "Được tạo:"
   undefined_wpm              : "Chưa định nghĩa thông số words_per_minute tại _config.yml"
   comment_form_info          : "Email của bạn sẽ được giữ bí mật. Các phần bắt buộc được đánh dấu"
   comment_form_comment_label : "Bình luận"
