@@ -2,6 +2,7 @@
 layout: single
 title: "First Single Soon?"
 excerpt: "Information about my first single, coming soon!"
+date: 2026-11-05
 ---
 
 > [!important]
