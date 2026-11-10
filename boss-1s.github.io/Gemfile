@@ -16,3 +16,6 @@ group :jekyll_plugins do
   gem "jekyll-sitemap"
   gem "jekyll-gfm-admonitions"
 end
+
+gem "jekyll-seo-tag", "~> 2.9", group: :jekyll_plugins
+gem "jekyll-env", "~> 1.1", group: :jekyll_plugins
