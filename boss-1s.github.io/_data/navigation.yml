@@ -13,3 +13,4 @@ main:
     url: /posts/
   - title: "Old Site"
     url: /archive/
+    target: _blank

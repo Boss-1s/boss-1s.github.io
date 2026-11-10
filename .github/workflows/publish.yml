@@ -29,6 +29,9 @@ jobs:
         - name: Configure Pages
           uses: actions/configure-pages@v4
         - name: Build site with Jekyll
+          env:
+            BUILD_DATE: ${{ github.event.head_commit.timestamp }}
+            BUILD_SHA: ${{ github.sha }}
           run: |
             cd boss-1s.github.io || exit 1
             bundle exec jekyll build

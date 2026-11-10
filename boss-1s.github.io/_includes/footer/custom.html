@@ -1,0 +1,10 @@
+<!--Begin custom footer content-->
+<small>
+    <strong>Last Deployed:</strong> {{ site.env.BUILD_DATE | default: "Unknown" }}
+    {% if site.env.BUILD_SHA %}
+        <br>
+        <strong>Build Revision SHA:</strong> <a href="https://github.com/Boss-1s/boss-1s.github.io/commit/{{ site.env.BUILD_SHA }}" target="_blank" rel="noopener">{{ site.env.BUILD_SHA | slice: 0, 7 }}</a>
+    {% endif %}
+</small>
+<br>
+<!--End custom footer content-->
