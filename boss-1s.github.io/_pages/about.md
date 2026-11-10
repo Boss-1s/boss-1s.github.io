@@ -5,7 +5,7 @@ title: "About"
 excerpt: "All about Boss_1s"
 author_profile: true
 date: 2026-11-01
-last_modified_at: 2026-11-09
+last_modified_at: 2026-11-10
 ---
 
 _If you're one of my classmates and are looking for **Eaglercraft**, you're in the wrong place. Try [clicking this link to go straight there.](https://boss-1s.github.io/archive/eag/)_
@@ -31,10 +31,8 @@ _If you're one of my classmates and are looking for **Eaglercraft**, you're in t
 
 Budding coder, developer, hobbyist, composer, singer, producer, gamer, and....sadly still a student. Who doesn't hate school sometimes...? 🥀
 
-## Coding/Development
-I use [GitHub](/) (obviously) and [Turbowarp](https://turbowarp.org). I also scarcely use Code.org for testing in a sandboxed environment. I used to use [Scratch](https://scratch.mit.edu), but sadly got banned because I overused [scratchattach](https://github.com/timmccool/scratchattach). Honestly, I don't care about Scratch as much as I used to; it's been crumbling on itself for a long time...
-
-Anyways, as for devices, I use a _Lenovo Chrome 500e_ (before that, I used a _Chromebook Acer Spin 514_), which is the device i use for everything (literally), a _3DS_, a _Raspberry Pi Pico 2W_ and a _Raspberry Pi 3B_. Using a Chromebook for development is definitely hard, but i've managed it for a while, and it should be fine.
+## [Coding/Development](/placeholder?from={{ page.permalink | url_encode }}{{ "#codingdevelopment" | url_encode }})
+I use [GitHub](https://github.com/Boss-1s) (obviously) and [Turbowarp](https://turbowarp.org). I also scarcely use Code.org for testing in a sandboxed environment. I used to use [Scratch](https://scratch.mit.edu), but sadly got banned because I overused [scratchattach](https://github.com/timmccool/scratchattach). Honestly, I don't care about Scratch as much as I used to; it's been crumbling on itself for a long time...
 
 Currently working on [**kms**](https://github.com/boss-1s/key-multivalue-storage) and helping out on [scratchattach](https://github.com/TimMcCool/scratchattach). I'm also working on a TurboWarp port of *Geometry Dash*, titled (aptly) ***Geometry Dash: TurboWarp Editon*** or **GDTW**.
 
@@ -43,7 +41,7 @@ Currently working on [**kms**](https://github.com/boss-1s/key-multivalue-storage
 > - HTML
 > - JS
 
-## Gaming
+## [Gaming](/placeholder?from={{ page.permalink | url_encode }}{{ "#gaming" | url_encode }})
 Minecrafter and Geometry Dasher.
 
 I play both *Minecraft: New Nintendo 3DS Edition* (1.9.19) and Bedrock Edition (whatever the newest stable is, 26.31?). You can find me on Bedrock with the gamertag ***YaBoss111***.

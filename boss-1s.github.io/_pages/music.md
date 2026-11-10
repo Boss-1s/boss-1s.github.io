@@ -5,18 +5,20 @@ permalink: /pages/projects/music_preview/
 excerpt: "Boss_1s's music projects"
 author_profile: true
 date: 2026-11-09
-last_modified_at: 2026-11-09
+last_modified_at: 2026-11-10
 ---
 
 Music. The sound of music. I love music - composing it, listening to it, taking inspiration from it; it is the part of me that no one sees.
 
 **You can find me on Noteflight via the username [`Boss_1s`](https://www.noteflight.com/user/5e7f3b8c0a4e4d2f9c8b4567).**
 
-The following is only a *taste* of the music I make. [Check out my full portfolio here](/placeholder/).
+The following is only a *taste* of the music I make. [Check out my full portfolio here](/placeholder?from={{ page.permalink | url_encode }}/).
 
 ## Band Arrangements
 
 These are arrangements that I've created over the years. They are not necessarily my best work, but it'll do. [As I posted in one comment](https://www.noteflight.com/music/titles/98a6f26c-382d-4d12-abdd-b1561318f635#:~:text=remnants%20of%20a%20younger%20me%20lol), these are "remnants of a younger me" ;)
+
+I'll make a [page](/placeholder?from={{ page.permalink | url_encode }}/) later containing all of the arrangements I've made.
 
 ### Back On Track
 
@@ -86,9 +88,9 @@ You can find the original piece by Waterflame by [clicking here.](https://www.ne
 
 ## Demos
 
-Demos, demos, demos. After choosing to take Music Production this year, I finally have the chance to *prolifically* write down demos and ideas for songs through SoundTrap. It's a really cool expirence, but also weird, because I have never written demos before -- always went straight to the point of the song, if you know what I mean.
+Demos, demos, demos. After choosing to take Music Production this year, I finally have the chance to *prolifically* write down demos and ideas for songs through SoundTrap. It's a really cool expirence, but also weird, because I have never written demos before -- always went straight to making mainstream songs.
 
-I've included two demos here that you can listen to. *I will add a page including all my demos later.* <!-- TODO: Add demos page -->
+I've included two demos here that you can listen to. [*I will add a page including all my demos later.*](/placeholder?from={{ page.permalink | url_encode }}/) <!-- TODO: Add demos page -->
 
 > [!important]
 > **My demos, unlike my mainstream songs, will always be made public at one point or another no matter what.**
@@ -99,7 +101,7 @@ I've included two demos here that you can listen to. *I will add a page includin
   <img src="/assets/One Snowy Beginning cover.png"  alt="Cover Image for 'One Snowy Beginning' by Boss_1s"><figcaption style="font: sans-serif;">Cover Image for 'One Snowy Beginning' by Boss_1s</figcaption>
 </figure>
 
-`One Snowy Beginning` is a duet I made back in September. Written in the key of F and just over a minute long, the piece captures a beginning -- a cold and wintry, yet warm, beginning of a story. *This piece teases one of the songs coming out in my debut album (whose name I will not reveal yet), with the following line in the description:* **`Time to time again, \ what once was will be again.`** Hee hee hee....
+`One Snowy Beginning` is a duet I made back in September. Written in the key of F and just over a minute long, the piece captures a beginning through the twinning of the violin and piano -- a cold and wintry, yet warm, beginning of a beautiful story yet to unfold. *This piece teases one of the songs coming out in my debut album (whose name I will not reveal yet), with the following line in the description:* **`Time to time again, \ what once was will be again.`** Hee hee hee....
 
 > [!note] Song Info
 > <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> **Idea created:** August 2026<br>
@@ -171,6 +173,6 @@ I've included two demos here that you can listen to. *I will add a page includin
 
 That's all for now.
 
-Coming Up: a page with **all** my demos and arrangements, and one for *coding stuff as well...*
+Coming Up: a [page](/placeholder?from={{ page.permalink | url_encode }}/) with **all** my demos and arrangements, and one for *coding stuff as well...*
 
 ---
