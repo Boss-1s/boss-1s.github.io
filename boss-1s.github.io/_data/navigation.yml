@@ -1,6 +1,14 @@
 main:
   - title: "About"
     url: /about/
+  - title: "Music"
+    url: /pages/projects/music_preview/
+  # - title: "Coding"
+  #   url: /pages/projects/coding/
+  # - title: "All Projects"
+  #   url: /pages/projects/
+  - title: "Categories"
+    url: /categories/
   - title: "Posts"
     url: /posts/
   - title: "Old Site"
