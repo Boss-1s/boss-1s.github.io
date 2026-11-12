@@ -285,7 +285,7 @@ defaults:
       comments: true
       share: true
       related: true
-      categories: "posts"
+      category: other
   - scope:
       path: ""
       type: pages
@@ -295,7 +295,7 @@ defaults:
       read_time: true
       share: true
       related: false
-      categories: "pages"
+      category: "pages"
 
 after_footer_scripts:
   - /assets/scripts/link_retarget.js
