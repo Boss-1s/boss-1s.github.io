@@ -224,6 +224,7 @@ whitelist:
   - jekyll-gfm-admonitions
 
 search: true
+search_provider: lunr
 lunr:
   search_within_pages: true
 
