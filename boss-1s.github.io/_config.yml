@@ -277,6 +277,10 @@ defaults:
       show_date: true
       date_format: "%Y %B %d"
   - scope:
+      path: "assets/js/lunr"
+    values:
+      layout: none
+  - scope:
       path: ""
       type: posts
     values:
