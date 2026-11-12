@@ -298,4 +298,5 @@ defaults:
       category: "pages"
 
 after_footer_scripts:
+  - /assets/scripts/poll_for_newVersion.js
   - /assets/scripts/link_retarget.js
