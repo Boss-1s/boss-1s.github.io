@@ -1,8 +1,6 @@
-const GITHUB_USER = 'Boss-1s';
-const GITHUB_REPO = 'boss-1s.github.io';
 const BRANCH = 'from-the-beginning,-again';
 
-const API_URL = encodeURIComponent(`https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/actions/workflows/publish.yml/runs?branch=${BRANCH}&status=success&per_page=1`);
+const API_URL = encodeURIComponent(`https://api.github.com/repos/Boss-1s/boss-1s.github.io/actions/workflows/publish.yml/runs?branch=${BRANCH}&status=success&per_page=1`);
 
 // Check every 3 minutes (180,000 ms) to stay well within GitHub's 60/hr unauthenticated rate limit
 const CHECK_INTERVAL = 180000;
