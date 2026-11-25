@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dump All IndexedDB Contents</title>
+</head>
+<body>
+
+  <h2>All IndexedDB Data:</h2>
+  <pre id="all-db-output">Scanning databases...</pre>
+
+  <script>
+    async function dumpAllIndexedDB() {
+      const output = document.getElementById("all-db-output");
+      const fullDump = {};
+
+      try {
+        // 1. Get a list of all databases on the current origin
+        const databases = await window.indexedDB.databases();
+
+        if (databases.length === 0) {
+          output.textContent = "No IndexedDB databases found on this origin.";
+          return;
+        }
+
+        // 2. Loop through each database
+        for (const dbInfo of databases) {
+          const dbName = dbInfo.name;
+          fullDump[dbName] = {};
+
+          await new Promise((resolve, reject) => {
+            const request = window.indexedDB.open(dbName);
+
+            request.onerror = () => reject(request.error);
+            request.onsuccess = (event) => {
+              const db = event.target.result;
+              const storeNames = Array.from(db.objectStoreNames);
+
+              if (storeNames.length === 0) {
+                db.close();
+                return resolve();
+              }
+
+              // 3. Open a single readonly transaction across all stores in this DB
+              const tx = db.transaction(storeNames, "readonly");
+              let completedStores = 0;
+
+              storeNames.forEach((storeName) => {
+                const store = tx.objectStore(storeName);
+                const getAllReq = store.getAll();
+
+                getAllReq.onsuccess = () => {
+                  fullDump[dbName][storeName] = getAllReq.result;
+                  completedStores++;
+
+                  if (completedStores === storeNames.length) {
+                    db.close();
+                    resolve();
+                  }
+                };
+              });
+            };
+          });
+        }
+
+        // 4. Print the entire nested object to the HTML page
+        output.textContent = JSON.stringify(fullDump, null, 2);
+
+      } catch (err) {
+        output.textContent = "Error reading IndexedDB: " + err.message;
+      }
+    }
+
+    dumpAllIndexedDB();
+  </script>
+
+</body>
+</html>
