@@ -28,6 +28,16 @@ last_modified_at: 2026-11-25
         background-color: #3b3b3b;
         cursor: not-allowed;
     }
+    button:disabled:hover {
+        background-color: #000000;
+        cursor: not-allowed;
+    }
+    .warn-btns {
+        background-color: chocolate;
+    }
+    .warn-btns:hover {
+        background-color: #5c2803;
+    }
     #disable-overlay {
         position: fixed;
         top: 0;
@@ -56,7 +66,9 @@ last_modified_at: 2026-11-25
 <hr>
 
 <h2 id="understanding-paragraph">Eaglercraft - What You Need to Know</h2>
-
+<br>
+<a href="#eag">Click here to skip to actual playing.</a>
+<br>
 <ul>
     <li><h3 id="what-is-eag">What <em>is</em> EaglerCraft?</h3></li>
     <ul>
@@ -85,10 +97,6 @@ last_modified_at: 2026-11-25
     </ul>
 </ul>
 
-<a href="#eag">Click here to skip to actual playing.</a>
-<br>
-<p></p>
-
 <hr>
 
 <h2 id="play">Play EaglerCraft!</h2>
@@ -103,7 +111,7 @@ last_modified_at: 2026-11-25
 
 <ul>
     <li><button>This is a normal button and will display the version number of EaglerCraft.</button></li>
-    <li><button style="background-color: chocolate;">This is a button that has a warning associated with it. Check under the heading of the section to see the warning.</button></li>
+    <li><button class="warn-btns">This is a button that has a warning associated with it. Check under the heading of the section to see the warning.</button></li>
     <li><button disabled data-disabled-reason="This button is disabled for demonstration purposes.">This is a disabled button. Hover over it to see the reason.</button></li>
 </ul>
 
@@ -111,23 +119,23 @@ last_modified_at: 2026-11-25
 
 <h4 id="wasm">WASM</h4>
 <ul>
-    <li><button onclick="openCloaked('/eag/eag/1.4.7.html/')">1.4.7</button></li>
-    <li><button onclick="openCloaked('/eag/eag/1.12.2_WASM.html/')">1.12.2</button></li>
-    <li><button onclick="openCloaked('/eag/eag/1.14.4_WASM.html/')">1.14.4</button></li>
-    <li><button onclick="openCloaked('/eag/eag/1.14.4_WASM_Aether.html/')" disabled data-disabled-reason="This version is currently disabled for now.">1.14.4 (w/ Aether dimension)</button></li>
-    <li><button onclick="openCloaked('/eag/eag/1.15.2_WASM.html/')">1.15.2</button></li>
-    <li><button onclick="openCloaked('/eag/eag/1.16u3.html/')">1.16.5 (u3)</button></li>
-    <li><button onclick="openCloaked('/eag/eag/1.17.html/')">1.17.1</button></li>
-    <li><button onclick="openCloaked('/eag/eag/26.2u2.html/')">26.2 (u2)</button></li>
-    <li><button onclick="openCloaked('/eag/eag/26.3.html/')">26.3</button></li>
+    <li><button onclick="openCloaked('/eag/eag/1.4.7.html')">1.4.7</button></li>
+    <li><button onclick="openCloaked('/eag/eag/1.12.2_WASM.html')">1.12.2</button></li>
+    <li><button onclick="openCloaked('/eag/eag/1.14.4_WASM.html')">1.14.4</button></li>
+    <li><button onclick="openCloaked('/eag/eag/1.14.4_WASM_Aether.html')" disabled data-disabled-reason="This version is currently disabled for now.">1.14.4 (w/ Aether dimension)</button></li>
+    <li><button onclick="openCloaked('/eag/eag/1.15.2_WASM.html')">1.15.2</button></li>
+    <li><button onclick="openCloaked('/eag/eag/1.16u3.html')">1.16.5 (u3)</button></li>
+    <li><button onclick="openCloaked('/eag/eag/1.17.html')">1.17.1</button></li>
+    <li><button onclick="openCloaked('/eag/eag/26.2u2.html')">26.2 (u2)</button></li>
+    <li><button onclick="openCloaked('/eag/eag/26.3.html')">26.3</button></li>
 </ul>
 
 <h4 id="js">JS</h4>
 <ul>
-    <li><button onclick="openCloaked('/eag/eag/1.12_EN.html/')">1.12 (English)</button></li>
-    <li><button onclick="openCloaked('/eag/eag/1.12_Intl.html/')">1.12 (International)</button></li>
-    <li><button onclick="openCloaked('/eag/eag/1.13.2_EN.html/')">1.13.2 (English)</button></li>
-    <li><button onclick="openCloaked('/eag/eag/1.15.2_JS_EN.html/')">1.15.2 (English)</button></li>
+    <li><button onclick="openCloaked('/eag/eag/1.12_EN.html')">1.12 (English)</button></li>
+    <li><button onclick="openCloaked('/eag/eag/1.12_Intl.html')">1.12 (International)</button></li>
+    <li><button onclick="openCloaked('/eag/eag/1.13.2_EN.html')">1.13.2 (English)</button></li>
+    <li><button onclick="openCloaked('/eag/eag/1.15.2_JS_EN.html')">1.15.2 (English)</button></li>
 </ul>
 
 <hr>
@@ -142,10 +150,10 @@ last_modified_at: 2026-11-25
 </div>
 
 <ul>
-    <li><button onclick="openCloaked('/eag/eagx/1.7.10.html/')">1.7.10</button></li>
-    <li><button onclick="openCloaked('/eag/eagx/1.8.html/')" disabled data-disabled-reason="This version is currently broken.">1.8</button></li>
-    <li><button onclick="openCloaked('/eag/eagx/1.13.html/')">1.13</button></li>
-    <li><button onclick="openCloaked('/eag/eagx/1.20.6.html/')" style="background-color: chocolate;">1.20.6</button></li>
+    <li><button onclick="openCloaked('/eag/eagx/1.7.10.html')">1.7.10</button></li>
+    <li><button onclick="openCloaked('/eag/eagx/1.8.html')" disabled data-disabled-reason="This version is currently broken.">1.8</button></li>
+    <li><button onclick="openCloaked('/eag/eagx/1.13.html')">1.13</button></li>
+    <li><button onclick="openCloaked('/eag/eagx/1.20.6.html')" class="warn-btns">1.20.6</button></li>
 </ul>
 
 <hr>
@@ -155,14 +163,14 @@ last_modified_at: 2026-11-25
 <h4 id="wasm-1">WASM</h4>
 
 <ul>
-    <li><button onclick="openCloaked('/eag/eagz/1.20u3.html/')" disabled data-disabled-reason="This version is currently broken.">1.20 (u3)</button></li>
+    <li><button onclick="openCloaked('/eag/eagz/1.20u3.html')" disabled data-disabled-reason="This version is currently broken.">1.20 (u3)</button></li>
 </ul>
 
 <h4 id="js-1">JS</h4>
 
 <ul>
-    <li><button onclick="openCloaked('/eag/eagz/1.20u3_Intl.html/')">1.20 (u3) (International)</button></li>
-    <li><button onclick="openCloaked('/eag/eagz/1.20u4b_Intl.html/')">1.20 (u4 beta) (International)</button></li>
+    <li><button onclick="openCloaked('/eag/eagz/1.20u3_Intl.html')">1.20 (u3) (International)</button></li>
+    <li><button onclick="openCloaked('/eag/eagz/1.20u4b_Intl.html')">1.20 (u4 beta) (International)</button></li>
 
 </ul>
 
@@ -179,13 +187,13 @@ last_modified_at: 2026-11-25
 <h4 id="wasm-2">WASM</h4>
 
 <ul>
-    <li><button onclick="openCloaked('/eag/eagly/u6_WASM.html/')">1.20 (u6)</button></li>
+    <li><button onclick="openCloaked('/eag/eagly/u6_WASM.html')">1.20 (u6)</button></li>
 </ul>
 
 <h4 id="js-2">JS</h4>
 
 <ul>
-    <li><button onclick="openCloaked('/eag/eagly/u6_JS.html/')">1.20 (u6)</button></li>
+    <li><button onclick="openCloaked('/eag/eagly/u6_JS.html')">1.20 (u6)</button></li>
 </ul>
 
 <hr>
