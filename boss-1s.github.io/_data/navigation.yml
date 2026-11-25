@@ -1,6 +1,8 @@
 main:
   - title: "About"
     url: /about/
+  - title: Play Eaglercraft
+    url: /eag/
   - title: "Music"
     url: /pages/projects/music_preview/
   # - title: "Coding"

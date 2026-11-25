@@ -26,6 +26,21 @@ This is the WASM-GC version of EaglercraftX and may not be compatible with outda
 
 <html style="width:100%;height:100%;background-color:black;">
 <head>
+<script>
+  (function() {
+    const prefix = location.pathname.replace(/[^a-zA-Z0-9]/g, "_") + "_";
+    const origOpen = indexedDB.open.bind(indexedDB);
+    const origDelete = indexedDB.deleteDatabase.bind(indexedDB);
+
+    indexedDB.open = function(name, version) {
+      return version !== undefined ? origOpen(prefix + name, version) : origOpen(prefix + name);
+    };
+    indexedDB.deleteDatabase = function(name) {
+      return origDelete(prefix + name);
+    };
+  })();
+</script>
+
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 <meta name="description" content="EaglercraftX 1.13 WASM-GC Offline" />

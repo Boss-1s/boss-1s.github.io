@@ -1,0 +1,259 @@
+---
+permalink: /eag/
+title: Play EaglerCraft!
+excerpt: Play Eaglercraft, a Minecraft clone that runs in your browser!
+layout: single
+read_time: false
+date: 2026-11-25
+last_modified_at: 2026-11-25
+---
+
+<style>
+    button {
+        background-color: #0053ab;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #003369;
+    }
+    button:disabled {
+        background-color: #3b3b3b;
+        cursor: not-allowed;
+    }
+    #disable-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        background-color: rgba(51, 5, 95, 0.75);
+        z-index: 9999;
+        display: none;
+        transform: translate(2%, -50%);
+        padding: 10px;
+    }
+    #disable-reason {
+        font-weight: bold;
+        color: white;
+    }
+</style>
+
+<div id="disable-overlay">This version is currently disabled. Reason: <span id="disable-reason"></span></div>
+
+<div markdown="block">
+    > [!important] Credits!
+    > ***All credits to [MilkdromedaStudios/all-of-eaglercraft](https://github.com/MilkdromedaStudios/all-of-eaglercraft) for these copies of Eaglercraft!***
+</div>
+
+<hr>
+
+<h2 id="understanding-paragraph">Eaglercraft - What You Need to Know</h2>
+
+<ul>
+    <li><h3 id="what-is-eag">What <em>is</em> EaglerCraft?</h3></li>
+    <ul>
+        <li>EaglerCraft is a Minecraft clone that runs in your browser.</li>
+        <li>It is a fork of the original Minecraft game, and it is not affiliated with Mojang or Microsoft.</li>
+    </ul>
+    <li><h3 id="eag-types">What are the different types of EaglerCraft?</h3></li>
+    <ul>
+        <li><strong>EaglerCraft</strong> is the original version of EaglerCraft, based on a version of Minecraft 1.5.2.</li>
+        <li><strong>EaglerCraftX</strong> is a fork of EaglerCraft based on Minecraft 1.8.8, and is the most popular type of EaglerCraft.</li>
+        <li><strong>EaglerCraftZ</strong> is a fork of EaglerCraft based on Minecraft 1.20, and is the most recent type of EaglerCraft.</li>
+        <li><strong>EaglerLite</strong> is NOT a type of EaglerCraft - rather, it is a launcher that allows you to load EaglerCraft more stably on low-end devices like Chromebooks.</li>
+        <li><strong>EaglyMC</strong> is a fork of EaglerCraftX that takes blocks and entites up to Minecraft 1.20 and backports them to Minecraft 1.8.8. However, EaglyMC is still run on Minecraft 1.8.8, meaning certain biomes, structures, and features are limited and/or not added.</li>
+    </ul>
+    <li><h3 id="eag-versions">What are the different versions of EaglerCraft?</h3></li>
+    <ul>
+        <li>Each version of EaglerCraft listed below matches the Minecraft version it is based on and attempting to recreate. </li>
+        <li>For example, EaglerCraft 1.12.2 is based on Minecraft 1.12's "the World of Color Update", and EaglerCraftX 1.20.6 is based on Minecraft 1.20's "Trails and Tales" update.</li>
+    </ul>
+    <li><h3 id="wasm-v-js">WebAssembly (WASM) vs. JavaScript (JS)</h3></li>
+    <ul>
+        <li>WASM is a newer technology that allows for faster and more efficient execution of code in the browser. It is generally recommended to use WASM versions of EaglerCraft if your device supports it.</li>
+        <li>Basically, EaglerCraft in WASM takes the original Minecraft code and compiles it to WebAssembly, which is a more efficient way to run the code in the browser.</li>
+        <li>JS is an older technology that is slower and less efficient than WASM, but it is more widely supported by older devices and browsers.</li>
+        <li>Using JavaScript allows for more compatibility with older devices and browsers, but at the cost of performance. <em>It is recommended to use WASM versions when possible, and only fallback to JS if necessary.</em></li>
+    </ul>
+</ul>
+
+<a href="#eag">Click here to skip to actual playing.</a>
+<br>
+<p></p>
+
+<hr>
+
+<h2 id="play">Play EaglerCraft!</h2>
+
+<div markdown="block">
+    > [!NOTE]
+    > If a button is grey (disabled), hover over it to see the reason why it is disabled.
+    > If a button is blue (enabled), click it to open the EaglerCraft version in a new tab.
+    >
+    > Eaglercraft automatically opens in about:blank.
+</div>
+
+<ul>
+    <li><button>This is a normal button and will display the version number of EaglerCraft.</button></li>
+    <li><button style="background-color: chocolate;">This is a button that has a warning associated with it. Check under the heading of the section to see the warning.</button></li>
+    <li><button disabled data-disabled-reason="This button is disabled for demonstration purposes.">This is a disabled button. Hover over it to see the reason.</button></li>
+</ul>
+
+<h3 id="eag">Eaglercraft</h3>
+
+<h4 id="wasm">WASM</h4>
+<ul>
+    <li><button onclick="openCloaked('/eag/eag/1.4.7.html/')">1.4.7</button></li>
+    <li><button onclick="openCloaked('/eag/eag/1.12.2_WASM.html/')">1.12.2</button></li>
+    <li><button onclick="openCloaked('/eag/eag/1.14.4_WASM.html/')">1.14.4</button></li>
+    <li><button onclick="openCloaked('/eag/eag/1.14.4_WASM_Aether.html/')" disabled data-disabled-reason="This version is currently disabled for now.">1.14.4 (w/ Aether dimension)</button></li>
+    <li><button onclick="openCloaked('/eag/eag/1.15.2_WASM.html/')">1.15.2</button></li>
+    <li><button onclick="openCloaked('/eag/eag/1.16u3.html/')">1.16.5 (u3)</button></li>
+    <li><button onclick="openCloaked('/eag/eag/1.17.html/')">1.17.1</button></li>
+    <li><button onclick="openCloaked('/eag/eag/26.2u2.html/')">26.2 (u2)</button></li>
+    <li><button onclick="openCloaked('/eag/eag/26.3.html/')">26.3</button></li>
+</ul>
+
+<h4 id="js">JS</h4>
+<ul>
+    <li><button onclick="openCloaked('/eag/eag/1.12_EN.html/')">1.12 (English)</button></li>
+    <li><button onclick="openCloaked('/eag/eag/1.12_Intl.html/')">1.12 (International)</button></li>
+    <li><button onclick="openCloaked('/eag/eag/1.13.2_EN.html/')">1.13.2 (English)</button></li>
+    <li><button onclick="openCloaked('/eag/eag/1.15.2_JS_EN.html/')">1.15.2 (English)</button></li>
+</ul>
+
+<hr>
+
+<h3 id="eagx">EaglercraftX</h3>
+
+<em>All of these copies are run with WASM.</em>
+
+<div markdown="block">
+    > [!warning]
+    > **Eaglercraft 1.20.6** is very laggy and may not run well on low-end devices.
+</div>
+
+<ul>
+    <li><button onclick="openCloaked('/eag/eagx/1.7.10.html/')">1.7.10</button></li>
+    <li><button onclick="openCloaked('/eag/eagx/1.8.html/')" disabled data-disabled-reason="This version is currently broken.">1.8</button></li>
+    <li><button onclick="openCloaked('/eag/eagx/1.13.html/')">1.13</button></li>
+    <li><button onclick="openCloaked('/eag/eagx/1.20.6.html/')" style="background-color: chocolate;">1.20.6</button></li>
+</ul>
+
+<hr>
+
+<h3 id="eagz">EaglercraftZ</h3>
+
+<h4 id="wasm-1">WASM</h4>
+
+<ul>
+    <li><button onclick="openCloaked('/eag/eagz/1.20u3.html/')" disabled data-disabled-reason="This version is currently broken.">1.20 (u3)</button></li>
+</ul>
+
+<h4 id="js-1">JS</h4>
+
+<ul>
+    <li><button onclick="openCloaked('/eag/eagz/1.20u3_Intl.html/')">1.20 (u3) (International)</button></li>
+    <li><button onclick="openCloaked('/eag/eagz/1.20u4b_Intl.html/')">1.20 (u4 beta) (International)</button></li>
+
+</ul>
+
+<hr>
+
+<h3 id="eaglite">EaglerLite</h3>
+
+<a href="/eag/eaglite/launcher.html" target="_blank">Click here to open the EaglerLite launcher in a new tab.</a>
+
+<hr>
+
+<h3 id="eagly">EaglyMC</h3>
+
+<h4 id="wasm-2">WASM</h4>
+
+<ul>
+    <li><button onclick="openCloaked('/eag/eagly/u6_WASM.html/')">1.20 (u6)</button></li>
+</ul>
+
+<h4 id="js-2">JS</h4>
+
+<ul>
+    <li><button onclick="openCloaked('/eag/eagly/u6_JS.html/')">1.20 (u6)</button></li>
+</ul>
+
+<hr>
+
+<script>
+function openCloaked(page) {
+  const base = window.location.origin;
+
+  var win = window.open('about:blank', '_blank');
+  win.document.body.style.margin = '0';
+  win.document.body.style.height = '100vh';
+
+  var loading_screen = win.document.createElement('div');
+  loading_screen.style.position = 'fixed';
+  loading_screen.style.top = '0';
+  loading_screen.style.left = '0';
+  loading_screen.style.width = '100%';
+  loading_screen.style.height = '100%';
+  loading_screen.style.backgroundColor = '#000';
+  loading_screen.style.display = 'flex';
+  loading_screen.style.justifyContent = 'center';
+  loading_screen.style.alignItems = 'center';
+
+  var loading_text = win.document.createElement('h1');
+  loading_text.style.color = '#fff';
+  loading_text.textContent = 'Loading...';
+
+  loading_screen.appendChild(loading_text);
+  win.document.body.appendChild(loading_screen);
+
+  var iframe = win.document.createElement('iframe');
+  iframe.style.border = 'none';
+  iframe.style.width = '100%';
+  iframe.style.height = '100%';
+  iframe.src = base + page;
+  win.document.body.appendChild(iframe);
+
+  iframe.onload = function () {
+    loading_screen.remove();
+  };
+}
+
+const disableOverlay = document.getElementById('disable-overlay');
+document.addEventListener('mousemove', (e) => {
+    disableOverlay.style.left = `${e.clientX}px`;
+    disableOverlay.style.top = `${e.clientY}px`;
+});
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach(button => {
+    button.addEventListener('mouseenter', (e) => {
+        if (e.target.tagName === 'BUTTON' && e.target.disabled) {
+            disableOverlay.style.display = 'block';
+            document.getElementById('disable-reason').textContent = e.target.dataset.disabledReason;
+        }
+    });
+    button.addEventListener('mouseleave', () => {
+        disableOverlay.style.display = 'none';
+    });
+    button.addEventListener('pointerenter', (e) => {
+        if (e.target.tagName === 'BUTTON' && e.target.disabled) {
+            disableOverlay.style.display = 'block';
+            document.getElementById('disable-reason').textContent = e.target.dataset.disabledReason;
+        }
+    });
+    button.addEventListener('pointerleave', () => {
+        disableOverlay.style.display = 'none';
+    });
+});
+
+</script>
